@@ -1,7 +1,6 @@
 const { readFile, writeFile } = require('../util/handler');
 
 class TaskController {
-    // Método estático para listar todas as tarefas
     static listarTasks(req, res, next) {
         try {
             const tasks = readFile();
@@ -12,7 +11,6 @@ class TaskController {
         }
     }
 
-    // Método estático para listar uma tarefa por ID
     static listarTaskPorId(req, res, next) {
         try {
             const { id } = req.params;
@@ -29,7 +27,6 @@ class TaskController {
         }
     }
 
-    // Método estático para cadastrar uma nova tarefa
     static cadastrarTask(req, res, next) {
         try {
             const tasks = readFile();
@@ -44,7 +41,6 @@ class TaskController {
         }
     }
 
-    // Método estático para atualizar uma tarefa
     static atualizarTask(req, res, next) {
         try {
             const { id } = req.params;
@@ -65,7 +61,6 @@ class TaskController {
         }
     }
 
-    // Método estático para excluir uma tarefa
     static excluirTask(req, res, next) {
         try {
             const { id } = req.params;
